@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  //fetch user
+  //fetch all users
   getAllUsers(size: number = 10): Observable<Responze> {
     return this.http.get<Responze>(`${this.apiUrl}/?results=${size}`).pipe(
       map(this.processResponse));
